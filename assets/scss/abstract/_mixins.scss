@@ -1,0 +1,15 @@
+@use './variaveis' as v;
+
+@mixin fs-fc-fw($fs, $fc: v.$cor-texto, $fw: 400) {
+    font-size: $fs;
+    color: $fc;
+    font-weight: $fw;
+}
+
+@mixin df-gap-aa-jc-fd($gap, $aa: stretch, $jc: flex-start, $fd: row) {
+    display: flex;
+    gap: $gap;
+    align-items: $aa;
+    justify-content: $jc;
+    flex-direction: $fd;
+}

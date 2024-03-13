@@ -1,0 +1,437 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  font-family: "Inter", sans-serif;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.navbar {
+  display: flex;
+  gap: 0;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 1.125rem 7rem;
+}
+.navbar .menu {
+  display: none;
+}
+.navbar .navbar__container__logo {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+.navbar .navbar__container__logo .navbar__title {
+  font-size: 1.125rem;
+  color: #3A404E;
+  font-weight: 500;
+}
+.navbar .navbar__list {
+  display: flex;
+  gap: 2rem;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+.navbar .navbar__list .navbar__list__item a {
+  font-size: 1rem;
+  color: #667085;
+  font-weight: 500;
+  text-decoration: none;
+}
+.navbar .navbar__container__btn {
+  display: flex;
+  gap: 0.75rem;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+.navbar .navbar__container__btn .btn {
+  font-size: 1rem;
+  color: #667085;
+  font-weight: 500;
+  text-decoration: none;
+  background-color: transparent;
+  padding: 0.8rem 1.125rem;
+  border: none;
+}
+.navbar .navbar__container__btn .btn:last-child {
+  font-size: 1rem;
+  color: #FFFFFF;
+  font-weight: 500;
+  background-color: #8E2424;
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 997px) {
+  .navbar {
+    padding: 1.125rem 1rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .navbar {
+    display: flex;
+    gap: 0;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .navbar .container__menu {
+    display: flex;
+    gap: 0.875rem;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+  }
+  .navbar .container__menu .menu {
+    display: block;
+    position: relative;
+  }
+  .navbar .container__menu .menu .menu__list {
+    background-color: #EAECF0;
+    border-radius: 8px;
+    position: absolute;
+    top: 150%;
+    padding: 1rem 50%;
+  }
+  .navbar .container__menu .menu .menu__list .menu__list__item a {
+    color: #667085;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .navbar .container__menu .menu .menu__list,
+  .navbar .container__menu .menu .menu__input {
+    display: none;
+  }
+  .navbar .container__menu .menu .menu__input:checked ~ .menu__list {
+    display: flex;
+    gap: 0.875rem;
+    align-items: stretch;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+  .navbar .container__menu .navbar__container__logo .navbar__title {
+    display: none;
+  }
+  .navbar .navbar__list {
+    display: none;
+  }
+}
+.header {
+  display: flex;
+  gap: 1.5rem;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-direction: column;
+  text-align: center;
+  padding: 6rem 20.25rem;
+}
+.header .header__title {
+  font-size: 1rem;
+  color: #8E2424;
+  font-weight: 600;
+}
+.header .header__subtitle {
+  font-size: 3rem;
+  color: #101828;
+  font-weight: 600;
+}
+.header .header__text {
+  font-size: 1rem;
+  color: #667085;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 997px) {
+  .header {
+    padding: 6rem 2rem;
+  }
+}
+.metric {
+  display: flex;
+  gap: 2rem;
+  align-items: stretch;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-bottom: 6rem;
+}
+.metric .metric__box {
+  display: flex;
+  gap: 1.25rem;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 280px;
+}
+.metric .metric__box .metric__title {
+  font-size: 3.75rem;
+  color: #8E2424;
+  font-weight: 600;
+}
+.metric .metric__box .metric__subtitle {
+  font-size: 1.125rem;
+  color: #101828;
+  font-weight: 500;
+}
+.metric .metric__box .metric__text {
+  font-size: 1rem;
+  color: #667085;
+  font-weight: 400;
+}
+
+.jobs {
+  display: flex;
+  gap: 4rem;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 6rem 5rem;
+}
+.jobs .jobs__talents {
+  display: flex;
+  gap: 4rem;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-direction: column;
+  text-align: center;
+}
+.jobs .jobs__talents .jobs__container {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.jobs .jobs__talents .jobs__container .jobs__title {
+  font-size: 0.875rem;
+  color: #8E2424;
+  font-weight: 500;
+  background-color: rgba(142, 36, 36, 0.05);
+  padding: 0.5rem;
+  border-radius: 20px;
+}
+.jobs .jobs__container {
+  display: flex;
+  gap: 2rem;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 0 5rem 6rem;
+}
+.jobs .jobs__container .jobs__container__title {
+  font-size: 1.25rem;
+  color: #101828;
+  font-weight: 500;
+}
+.jobs .jobs__container .jobs__box {
+  display: flex;
+  gap: 1.5rem;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.jobs .jobs__container .jobs__box .box__item {
+  display: flex;
+  gap: 2rem;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-direction: column;
+  border: 1px solid #EAECF0;
+  border-radius: 16px;
+  padding: 1.5rem 1.5rem 1.75rem 1.5rem;
+}
+.jobs .jobs__container .jobs__box .box__item .box__title {
+  font-size: 1.125rem;
+  color: #101828;
+  font-weight: 500;
+}
+.jobs .jobs__container .jobs__box .box__item div {
+  display: flex;
+  gap: 1.5rem;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+.jobs .jobs__container .jobs__box .box__item div .box__subtitle {
+  font-size: 1rem;
+  color: #667085;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 767px) {
+  .jobs {
+    padding: 1rem 0.5rem;
+  }
+  .jobs .jobs__container {
+    padding: 0;
+  }
+}
+.depositions {
+  text-align: center;
+  background-color: rgba(195, 25, 25, 0.03);
+  margin: 0 7rem 6rem 7rem;
+}
+.depositions .depositions__container {
+  display: flex;
+  gap: 2rem;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 4rem;
+}
+.depositions .depositions__container .depositions__container__text, .depositions .depositions__container .depositions__container__img {
+  display: flex;
+  gap: 1rem;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.depositions .depositions__container .depositions__container__text .container__title, .depositions .depositions__container .depositions__container__img .container__title {
+  font-size: 0.875rem;
+  color: #8E2424;
+  font-weight: 600;
+}
+.depositions .depositions__container .depositions__container__text .container__text, .depositions .depositions__container .depositions__container__img .container__text {
+  font-size: 2.25rem;
+  color: #101828;
+  font-weight: 500;
+}
+.depositions .depositions__container .depositions__container__img {
+  align-items: center;
+}
+.depositions .depositions__container .depositions__container__img .container__box {
+  display: flex;
+  gap: 0.25rem;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.depositions .depositions__container .depositions__container__img .container__box h3 {
+  font-size: 1rem;
+  color: #101828;
+  font-weight: 500;
+}
+.depositions .depositions__container .depositions__container__img .container__box p {
+  font-size: 0.875rem;
+  color: #667085;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 767px) {
+  .depositions {
+    margin: 0;
+  }
+  .depositions .depositions__container .depositions__container__text .container__text, .depositions .depositions__container .depositions__container__img .container__text {
+    font-size: 1.5rem;
+  }
+}
+form {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 6rem 0;
+  background-color: #F9FAFB;
+}
+form h2 {
+  font-size: 2.25rem;
+  color: #101828;
+  font-weight: 600;
+}
+form p {
+  font-size: 1.25rem;
+  color: #667085;
+  font-weight: 400;
+}
+form div {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+form div input {
+  width: 360px;
+  padding: 0.85rem 0.875rem;
+  border-radius: 8px;
+  border: 1px solid #EAECF0;
+}
+form div button {
+  font-size: 1rem;
+  color: #FFFFFF;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  background-color: #8E2424;
+  padding: 0.75rem 1.25rem;
+}
+form .copy {
+  font-size: 1rem;
+  color: #98A2B3;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 767px) {
+  form {
+    padding: 0 0.5rem 1rem;
+    text-align: center;
+  }
+  form div {
+    flex-direction: column;
+  }
+  form div input {
+    width: 80vw;
+  }
+}/*# sourceMappingURL=style.css.map */

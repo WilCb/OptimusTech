@@ -1,0 +1,26 @@
+@use '../abstract/variaveis' as v;
+@use '../abstract/mixins';
+
+.header {
+    @include mixins.df-gap-aa-jc-fd(1.5rem, $fd: column);
+    text-align: center;
+    padding: 6rem 20.25rem;
+
+    .header__title {
+        @include mixins.fs-fc-fw(1rem, $fw: 600, $fc: v.$cor-vermelho-vinho);
+    }
+
+    .header__subtitle {
+        @include mixins.fs-fc-fw(3rem, $fw: 600, $fc: v.$cor-titulo);
+    }
+
+    .header__text {
+        @include mixins.fs-fc-fw(1rem);
+    }
+}
+
+@media screen and (max-width: 997px) {
+    .header {
+        padding: 6rem 2rem;
+    }
+}

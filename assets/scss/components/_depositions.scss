@@ -1,0 +1,56 @@
+@use '../abstract/variaveis' as v;
+@use '../abstract/mixins';
+
+.depositions {
+    text-align: center;
+    background-color: v.$cor-rosa-claro;
+    margin: 0 7rem 6rem 7rem;
+
+    .depositions__container {
+        @include mixins.df-gap-aa-jc-fd(2rem, $fd: column);
+        padding: 4rem;
+
+        .depositions__container__text {
+            @include mixins.df-gap-aa-jc-fd(1rem, $fd: column);
+
+            .container__title {
+                @include mixins.fs-fc-fw(.875rem, $fc: v.$cor-vermelho-vinho, $fw: 600);
+            }
+
+            .container__text {
+                @include mixins.fs-fc-fw(2.25rem, $fc: v.$cor-titulo, $fw: 500);
+            }
+        }
+
+        .depositions__container__img {
+            @extend .depositions__container__text;
+            align-items: center;
+
+            .container__box {
+                @include mixins.df-gap-aa-jc-fd(.25rem, $fd: column);
+
+                h3 {
+                    @include mixins.fs-fc-fw(1rem, $fc: v.$cor-titulo, $fw: 500);
+                }
+
+                p {
+                    @include mixins.fs-fc-fw(.875rem, $fw: 500);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .depositions {
+        margin: 0;
+
+        .depositions__container {
+            .depositions__container__text {
+                .container__text {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}

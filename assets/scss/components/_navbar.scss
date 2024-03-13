@@ -1,0 +1,101 @@
+@use '../abstract/variaveis' as v;
+@use '../abstract/mixins';
+
+.navbar {
+    @include mixins.df-gap-aa-jc-fd(0, $aa: center, $jc: space-between);
+    padding: 1.125rem 7rem;
+
+    .menu {
+        display: none;
+    }
+
+    .navbar__container__logo {
+        @include mixins.df-gap-aa-jc-fd(.5rem, $aa: center);
+
+        .navbar__title {
+            @include mixins.fs-fc-fw(1.125rem, $fw: 500, $fc: v.$cor-logotipo);
+        }
+    }
+
+    .navbar__list {
+        @include mixins.df-gap-aa-jc-fd(2rem);
+
+        .navbar__list__item a {
+            @include mixins.fs-fc-fw(1rem, $fw: 500, $fc: v.$cor-texto);
+            text-decoration: none;
+        }
+    }
+
+    .navbar__container__btn {
+        @include mixins.df-gap-aa-jc-fd(.75rem);
+
+        .btn {
+            @include mixins.fs-fc-fw(1rem, $fw: 500, $fc: v.$cor-texto);
+            text-decoration: none;
+            background-color: transparent;
+            padding: .800rem 1.125rem;
+            border: none;
+
+            &:last-child {
+                @include mixins.fs-fc-fw(1rem, $fw: 500, $fc: v.$cor-branco);
+                background-color: v.$cor-vermelho-vinho;
+                border-radius: 8px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 997px) {
+    .navbar {
+        padding: 1.125rem 1rem;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    .navbar {
+        @include mixins.df-gap-aa-jc-fd(0, $aa: center, $jc: space-between);
+
+        .container__menu {
+            @include mixins.df-gap-aa-jc-fd(.875rem, $aa: center);
+            .menu {
+                display: block;
+                position: relative;
+
+                .menu__list {
+                    background-color: v.$cor-cinza-claro;
+                    border-radius: 8px;
+                    position: absolute;
+                    top: 150%;
+                    padding: 1rem 50%;
+
+                    .menu__list__item a {
+                        color: v.$cor-texto;
+                        text-decoration: none;
+                        white-space: nowrap;
+                    }
+                }
+
+                .menu__list,
+                .menu__input {
+                    display: none;
+                }
+
+                .menu__input:checked~.menu__list {
+                    @include mixins.df-gap-aa-jc-fd(.875rem, $fd: column);
+
+                }
+            }
+
+            .navbar__container__logo .navbar__title {
+                display: none;
+            }
+
+        }
+        
+        .navbar__list {
+            display: none;
+        }
+
+    }
+}

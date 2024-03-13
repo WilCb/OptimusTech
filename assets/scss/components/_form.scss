@@ -1,0 +1,52 @@
+@use '../abstract/variaveis' as v;
+@use '../abstract/mixins';
+
+form {
+    @include mixins.df-gap-aa-jc-fd(2.5rem, $fd: column, $aa: center);
+    padding: 6rem 0;
+    background-color: v.$cor-bd-form;
+
+    h2 {
+        @include mixins.fs-fc-fw(2.25rem, $fw: 600, $fc: v.$cor-titulo);
+    }
+
+    p {
+        @include mixins.fs-fc-fw(1.25rem);
+    }
+
+    div {
+        @include mixins.df-gap-aa-jc-fd(1rem, $aa: center);
+        input {
+            width: 360px;
+            padding: 0.85rem 0.875rem;
+            border-radius: 8px;
+            border: 1px solid v.$cor-cinza-claro;
+        }
+
+        button {
+            @include mixins.fs-fc-fw(1rem, $fw: 500, $fc: v.$cor-branco);
+            border: none;
+            border-radius: 8px;
+            background-color: v.$cor-vermelho-vinho;
+            padding: .75rem 1.25rem;
+        }
+    }
+
+    .copy {
+        @include mixins.fs-fc-fw(1rem, $fc: v.$cor-copy);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    form {
+        padding: 0 .5rem 1rem;
+        text-align: center;
+        div {
+            flex-direction: column;
+
+            input {
+                width: 80vw;
+            }
+        }
+    }
+}

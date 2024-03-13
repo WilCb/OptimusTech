@@ -1,0 +1,64 @@
+@use '../abstract/variaveis' as v;
+@use '../abstract/mixins';
+
+.jobs {
+    @include mixins.df-gap-aa-jc-fd(4rem, $fd: column);
+    padding: 6rem 5rem;
+
+    .jobs__talents {
+        @include mixins.df-gap-aa-jc-fd(4rem, $fd: column);
+        text-align: center;
+
+        .jobs__container {
+            @include mixins.df-gap-aa-jc-fd(1.25rem, $fd: column, $aa: center);
+            
+            .jobs__title {
+                @include mixins.fs-fc-fw(.875rem, $fc: v.$cor-vermelho-vinho, $fw: 500);
+                background-color: v.$cor-vermelho-vinho-fraco;
+                padding: 0.5rem;
+                border-radius: 20px;
+            }
+        }
+    }
+
+    .jobs__container {
+        @include mixins.df-gap-aa-jc-fd(2rem, $fd: column);
+        padding: 0 5rem 6rem;
+
+        .jobs__container__title {
+            @include mixins.fs-fc-fw(1.25rem, $fc: v.$cor-titulo, $fw: 500);
+        }
+
+        .jobs__box {
+            @include mixins.df-gap-aa-jc-fd(1.5rem, $fd: column);
+
+            .box__item {
+                @include mixins.df-gap-aa-jc-fd(2rem, $fd: column);
+                border: 1px solid v.$cor-cinza-claro;
+                border-radius: 16px;
+                padding: 1.5rem 1.5rem 1.75rem 1.5rem;
+
+                .box__title {
+                    @include mixins.fs-fc-fw(1.125rem, $fc: v.$cor-titulo, $fw: 500);
+                }
+
+                div {
+                    @include mixins.df-gap-aa-jc-fd(1.5rem);
+
+                    .box__subtitle {
+                        @include mixins.fs-fc-fw(1rem, $fw: 500);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .jobs {
+        padding: 1rem .5rem;
+        .jobs__container {
+            padding: 0;
+        }
+    }
+}
