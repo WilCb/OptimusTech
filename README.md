@@ -1,6 +1,8 @@
 # OptimusTech
 ### #7DaysOfCode - HTML e CSS
 
+Link do projeto [OptimusTech](https://optimus-tech-olive-sigma.vercel.app/)
+
 Desafio da alura para criação do site através do design disponibilizado na ferramenta Figma. <br>
 Disponível no Link: [7daysOfCode-HTML-CSS](https://www.figma.com/file/mm3MLozvUDGhDRTxSLlGL5/7daysOfCode-HTML-CSS?type=design&node-id=0-1&mode=design&t=EWHJviLW4qnO0GAh-0)
 <br><br><br>
