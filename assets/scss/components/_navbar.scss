@@ -23,6 +23,10 @@
         .navbar__list__item a {
             @include mixins.fs-fc-fw(1rem, $fw: 500, $fc: v.$cor-texto);
             text-decoration: none;
+
+            &:hover {
+                color: v.$cor-vermelho-vinho;
+            }
         }
     }
 
@@ -36,10 +40,21 @@
             padding: .800rem 1.125rem;
             border: none;
 
+            &:hover {
+                background-color: v.$cor-vermelho-vinho;
+                color: v.$cor-branco;
+                border-radius: 8px;
+            }
+
             &:last-child {
                 @include mixins.fs-fc-fw(1rem, $fw: 500, $fc: v.$cor-branco);
                 background-color: v.$cor-vermelho-vinho;
                 border-radius: 8px;
+
+                &:hover {
+                    background-color: v.$cor-vermelho-vinho-fraco;
+                    color: v.$cor-titulo;
+                }
             }
         }
     }

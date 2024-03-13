@@ -89,6 +89,9 @@ table {
   font-weight: 500;
   text-decoration: none;
 }
+.navbar .navbar__list .navbar__list__item a:hover {
+  color: #8E2424;
+}
 .navbar .navbar__container__btn {
   display: flex;
   gap: 0.75rem;
@@ -105,12 +108,21 @@ table {
   padding: 0.8rem 1.125rem;
   border: none;
 }
+.navbar .navbar__container__btn .btn:hover {
+  background-color: #8E2424;
+  color: #FFFFFF;
+  border-radius: 8px;
+}
 .navbar .navbar__container__btn .btn:last-child {
   font-size: 1rem;
   color: #FFFFFF;
   font-weight: 500;
   background-color: #8E2424;
   border-radius: 8px;
+}
+.navbar .navbar__container__btn .btn:last-child:hover {
+  background-color: rgba(142, 36, 36, 0.05);
+  color: #101828;
 }
 
 @media screen and (max-width: 997px) {
